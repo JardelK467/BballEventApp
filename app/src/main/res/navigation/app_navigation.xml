@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/MainFragment"
+    android:id="@+id/app_navigation">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.bballeventapp.ui.MainFragment"
+        android:label="Bball Events"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_entryFragment"
+            app:destination="@+id/EntryFragment"/>
+
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@+id/DetailFragment"/>
+    </fragment>
+
+     <fragment
+        android:id="@+id/EntryFragment"
+        android:name="com.example.bballeventapp.ui.EntryFragment"
+        android:label="Add Entry"
+        tools:layout="@layout/fragment_entry">
+        <action
+            android:id="@+id/action_EntryFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="com.example.bballeventapp.ui.DetailFragment"
+        android:label="Edit Entry"
+        tools:layout="@layout/fragment_details">
+    <action
+        android:id="@+id/action_DetailFragment_to_MainFragment"
+        app:destination="@id/MainFragment" />
+        <argument
+            android:name="currentEvent"
+            app:argType="com.example.bballeventapp.model.Event" />
+    </fragment>
+
+
+</navigation>
