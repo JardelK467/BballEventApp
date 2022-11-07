@@ -11,8 +11,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_recycler"
-        android:layout_width="418dp"
-        android:layout_height="674dp"
+        android:layout_width="411dp"
+        android:layout_height="628dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,10 +37,22 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="300dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="16dp"
         android:text="Click Event to Edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="336dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_launcher_delete"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

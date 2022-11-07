@@ -17,6 +17,10 @@ class EventAdapter(private var eventsList: List<Event> = emptyList()) : Recycler
         notifyDataSetChanged()
     }
 
+    fun deleteEvent(event: Event){
+        this.eventsList
+    }
+
     //Create a Viewholder for Recycler view
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder =
         EventViewHolder(
