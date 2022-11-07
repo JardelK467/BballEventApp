@@ -18,18 +18,25 @@ class EventViewModel(application: Application): AndroidViewModel(application) {
         readAllData = repository.readAllData
     }
 
-    fun addEvent(event: Event){
+    fun addEvent(event: Event)
+    {
         //Runs in the background
         viewModelScope.launch(Dispatchers.IO){
             repository.addEvent(event)
         }
 
     }
-    fun updateEvent(event: Event){
+    fun updateEvent(event: Event)
+    {
         viewModelScope.launch(Dispatchers.IO){
             repository.updateEvent(event)
         }
+    }
 
+    fun deleteEvent(event: Event)
+    {
+        viewModelScope.launch(Dispatchers.IO){
+        repository.deleteEvent(event)}
     }
 
 }

@@ -15,6 +15,9 @@ interface EventDao {
     @Update
     fun updateEvent(event: Event)
 
+    @Delete
+    fun deleteEvent(event: Event)
+
     //Reads all the data within the table
     @Query("SELECT * FROM event_table ORDER BY date ASC")
     fun readAllData(): LiveData<List<Event>>
