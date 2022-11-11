@@ -1,5 +1,6 @@
 package com.example.bballeventapp.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation.findNavController
@@ -19,6 +20,7 @@ class EventAdapter(private var eventsList: List<Event> = emptyList()) : Recycler
 
     fun deleteEvent(event: Event){
         this.eventsList
+        notifyDataSetChanged()
     }
 
     //Create a Viewholder for Recycler view
